@@ -638,6 +638,10 @@ progress::-moz-progress-bar {
     background-color: var(--white-color);
 }
 
+.portafolio-modal img {
+    max-width: 400px;
+}
+
 .portafolio-modal h3 {
     border-bottom: medium solid var(--first-color);
     padding: .5rem 0;
@@ -671,8 +675,8 @@ progress::-moz-progress-bar {
 }
 
 
-
 @media screen and (min-width:768px) {
+
     .contact-cards {
         display: grid;
         grid-template-columns: repeat(2, 48%);
@@ -711,13 +715,11 @@ progress::-moz-progress-bar {
 
 
 
+
 }
 
 @media screen and (min-width:1024px) {
 
-    .footer {
-        margin-bottom: 0;
-    }
 
     .about {
         display: grid;
@@ -726,8 +728,16 @@ progress::-moz-progress-bar {
         align-content: center;
     }
 
+    blockquote {
+        width: 45rem;
+    }
+
     .contact-cards {
         grid-template-columns: repeat(4, 24%);
+    }
+
+    .footer {
+        margin-bottom: 0;
     }
 
     .header {
