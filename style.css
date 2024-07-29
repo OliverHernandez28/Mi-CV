@@ -1,11 +1,14 @@
 /* Custom Properties */
 :root {
-    --first-color: #d90062;
-    --first-alpha-color: rgba(217, 0, 98, .75);
-    --second-color: #14192d;
-    --second-alpha-color: rgba(20, 25, 45, .75);
-    --third-color: #501464;
-    --third-alpha-color: rgba(80, 20, 100, .75);
+    --first-color: #ff6f61;
+    --first-alpha-color: rgba(255, 111, 97, .75);
+    --second-color: #2b2d42;
+    --second-alpha-color: rgba(43, 45, 66, .75);
+    --third-color: #8d99ae;
+    --third-alpha-color: rgba(141, 153, 174, .75);
+
+
+
 
     --white-color: #fff;
     --gray-light-color: #f3f3f3;
@@ -135,6 +138,10 @@ h6 {
     /* animation: carousel-slide 12s ease-in-out 3s; */
 }
 
+/* .carousel:hover .slides {
+    animation: carousel-slide 8s ease-in-out 1s;
+} */
+
 .carousel input {
     display: none;
 }
@@ -252,6 +259,35 @@ h6 {
         margin-left: 0;
     }
 }
+
+
+/* Flip Card */
+.flip-card-1 {
+    position: relative;
+    transition: transform 1s ease-in-out;
+    perspective: 10rem;
+    transform-style: preserve-3d;
+}
+
+.flip-card-1:hover {
+    transform: rotateY(180deg);
+}
+
+.flip-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-front {
+    transform: rotateY(0deg);
+}
+
+.flip-back {
+    transform: rotateY(180deg);
+}
+
 
 /* HeroImage */
 .hero-image {
