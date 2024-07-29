@@ -8,8 +8,6 @@
     --third-alpha-color: rgba(141, 153, 174, .75);
 
 
-
-
     --white-color: #fff;
     --gray-light-color: #f3f3f3;
     --gray-color: #ccc;
@@ -460,6 +458,7 @@ progress::-moz-progress-bar {
     .menu a:hover {
         background-color: transparent;
     }
+
 }
 
 /* Utilities */
@@ -483,12 +482,36 @@ progress::-moz-progress-bar {
     padding: 1rem;
     display: inline-block;
     width: 200px;
+    height: auto;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
     color: var(--white-color);
     background-color: var(--first-color);
+    position: relative;
+
+    cursor: pointer;
+    overflow: hidden;
 }
+
+.anim-bottom::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: .25rem;
+    background-color: var(--second-color);
+    transition: width 1s ease, left .5s ease, right .5s ease;
+}
+
+.anim-bottom:hover:after {
+    width: 100%;
+}
+
+.to-left::after {
+    left: 0;
+}
+
 
 
 .container {
@@ -710,6 +733,12 @@ progress::-moz-progress-bar {
     height: 1.5rem;
 }
 
+.social-media a:hover svg {
+    fill: var(--first-color);
+    transform: scale(1.4);
+    transition: all 1s ease;
+}
+
 
 @media screen and (min-width:768px) {
 
@@ -798,4 +827,5 @@ progress::-moz-progress-bar {
     .services .section-title {
         grid-column: span 3;
     }
+
 }
