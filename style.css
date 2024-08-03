@@ -359,6 +359,10 @@ blockquote {
     position: relative;
 }
 
+.modal-content img{
+    display: none;
+}
+
 .modal-close {
     position: absolute;
     top: 1rem;
@@ -864,6 +868,10 @@ progress::-moz-progress-bar {
 
     #slide-4:checked~.slides {
         transform: translateX(-75%);
+    }
+
+    .modal-content img{
+        display: inline-block;
     }
 
 }
